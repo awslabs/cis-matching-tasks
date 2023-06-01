@@ -19,7 +19,7 @@ verification.
 
 The implementation encompasses both R and python languages. The construction of intervals in `R` is situated in [`R-code/utils.R`](R-code/utils.R) and [`R-code/utils-roc.R`](R-code/utils_roc.R). Most of the methods are also accessible in `python` via [`python-code/utils.py`](python-code/utils.py). A Jupyter notebook illustrating the usage of these methods is located at [`python-code/morph_tutorial.ipynb`](python-code/morph_tutorial.ipynb).
 
-Code to replicate the experiments can be found in `R-code/run_experiments_*.R` and `python-code/run_experiments_*.py`.
+Code to replicate the experiments can be found in `R-code/run_experiments_*.R`.
 
 <!-- ## :books: Citation -->
 
