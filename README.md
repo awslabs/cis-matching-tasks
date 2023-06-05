@@ -1,12 +1,12 @@
 <h1 align="center">Confidence Intervals for Error Rates in Matching Tasks</h1>
 
-<!-- <p align="center">
-    <a href="..."><img src="..." alt="Paper"></a>
-</p> -->
+<p align="center">
+    <a href="https://arxiv.org/abs/2306.01198"><img src="https://img.shields.io/badge/paper-arXiv-red" alt="Paper"></a>
+    <img src="https://img.shields.io/github/license/awslabs/cis-matching-tasks" alt="Apache-2.0">
+</p>
 
-This repository houses the code to use the methods described in the paper <em>Confidence Intervals for
-Error Rates in Matching Tasks: Critical Review and Recommendations</em>, where we discuss the construction of confidence intervals for performance metrics in tasks such as 1:1 face and speaker
-verification.
+This repository houses the code to construct confidence intervals for performance metrics in tasks such as 1:1 face and speaker
+verification. See [our paper](https://arxiv.org/abs/2306.01198) for a description of the methods.
 
 <strong>Performance metrics</strong>. The code enables you to construct $1-\alpha$ confidence intervals for
 
@@ -21,7 +21,18 @@ The implementation encompasses both R and python languages. The construction of 
 
 Code to replicate the experiments can be found in `R-code/run_experiments_*.R`.
 
-<!-- ## :books: Citation -->
+## :books: Citation
+
+To cite our code,
+
+```
+@article{fogliato2023confidence,
+    title={Confidence Intervals for Error Rates in Matching Tasks: Critical Review and Recommendations},
+    author={Riccardo Fogliato and Pratik Patil and Pietro Perona},
+    journal={arXiv preprint arXiv:2306.01198},
+    year={2023}
+}
+```
 
 ## Security
 
