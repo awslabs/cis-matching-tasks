@@ -66,7 +66,7 @@ ci_fnr_boot, ci_fpr_boot = uq.get_binerror_ci(threshold=threshold, var_fnr=var_f
 ci_fnr_boot, ci_fpr_boot
 ```
 
-To generate the intervals more quickly, simply use
+To generate the intervals without bothering about variance estimation, use
 ```
 uq.get_binerror_ci(threshold = threshold, alpha = 0.05)
 ```
