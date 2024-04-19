@@ -5,10 +5,11 @@
     <img src="https://img.shields.io/github/license/awslabs/cis-matching-tasks" alt="Apache-2.0">
 </p>
 
-This repository houses the code to construct confidence intervals for
-performance metrics in 1:1 matching tasks :jigsaw: such as 1:1 face and speaker
-verification. See [our paper](https://arxiv.org/abs/2306.01198) (to appear at
-IJCV) for a description of the methods.
+This repository houses the cismat (Confidence IntervalS for MAtching Tasks)
+package to construct confidence intervals for performance metrics in 1:1
+matching tasks :jigsaw: such as 1:1 face and speaker verification. See [our
+paper](https://arxiv.org/abs/2306.01198) (to appear at IJCV) for a description
+of the methods.
 
 <strong>Performance metrics</strong> With this code you can construct $1-\alpha$
 confidence intervals $C_{1-\alpha}$ for metrics $\theta^*$ such as
@@ -27,7 +28,7 @@ bootstrap) are implemented in both languages.
 
 ## :rocket: Getting started
 
-In order to intall the package, run 
+In order to intall the cismat package, run 
 ```
 pip install cismat
 ```
