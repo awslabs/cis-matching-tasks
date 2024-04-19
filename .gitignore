@@ -1,11 +1,11 @@
 .DS_Store
-data
 plots
 figures
 results
 pretrained_models
 *.pdf
-
+dist
+data/morph
 
 # History files
 .Rhistory

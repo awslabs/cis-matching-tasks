@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "cismat"
+version = "0.1.0"
+description = "A package for uncertainty quantification of error rates in 1:1 matching tasks."
+authors = ["Riccardo Fogliato"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
