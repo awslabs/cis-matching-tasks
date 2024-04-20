@@ -5,19 +5,19 @@
     <img src="https://img.shields.io/github/license/awslabs/cis-matching-tasks" alt="Apache-2.0">
 </p>
 
-This repository houses the cismat (Confidence IntervalS for MAtching Tasks)
-package to construct confidence intervals for performance metrics in 1:1
-matching tasks such as 1:1 face and speaker verification. See [our
-paper](https://arxiv.org/abs/2306.01198) for a description of the methods.
+This repository hosts the cismat (Confidence IntervalS for MAtching Tasks)
+package, designed to create confidence intervals for performance metrics in 1:1
+matching tasks like face and speaker verification.
 
-<strong>Performance metrics</strong> With this code you can construct $1-\alpha$
-confidence intervals $C_{\alpha}$ for metrics $\theta^*$ such as
+With cismat, you can generate confidence intervals ($C_{\alpha}$) with a
+confidence level of $1-\alpha$ for metrics ($\theta^*$) such as:
 
 - False Positive Rate (FPR, aka FMR or FAR) and False Negative Rate (FNR, aka
   FNMR or FRR) estimates
 - ROC coordinate estimates such as FNR@FPR (aka FNMR@FMR or FRR@FAR)
 
-such that $\mathbb{P}(\theta^*\in C_{\alpha})\geq 1-\alpha$. 
+such that $\mathbb{P}(\theta^*\in C_{\alpha})\geq 1-\alpha$. Check out [our
+paper](https://arxiv.org/abs/2306.01198) for a description of the methods.
 
 ## :rocket: Getting started
 
