@@ -51,22 +51,21 @@ mt.generate_similarity_scores()  # Generate cosine similarity scores between ima
 # Set a threshold for determining matches versus non-matches
 threshold = 0.9
 # Instantiate the class to estimate error rates using similarity scores
-uq = UncertaintyEstimator(scores=mt.similarity_scores) # Example structure: dictionary[id1][id2] = [score between image from id1 and id2]
+# Example structure: dictionary[id1][id2] = [score between image from id1 and id2]
+uq = UncertaintyEstimator(scores=mt.similarity_scores) 
 # Compute False Non-Match Rate (FNMR, aka FNR) and False Match Rate (FMR, aka FPR) based on the threshold
 fnr, fpr, _ = uq.compute_binerror_metrics(threshold)
 fnr, fpr
 
-# Estimate the variance of FNMR and FMR using a plug-in estimator
+## Calculate 95% Confidence Intervals (CI) for FNMR and FMR using Wilson's method
+# with a plug-in estimator of the variance
 var_fnr, var_fpr = uq.compute_variance(threshold=threshold, estimator="plugin")
-# Calculate 95% Confidence Intervals (CI) for FNMR and FMR using Wilson's method
 ci_fnr, ci_fpr = uq.get_binerror_ci(threshold=threshold, var_fnr=var_fnr, var_fpr=var_fpr, alpha=0.05)
 ci_fnr, ci_fpr
 
-# Perform double-or-nothing bootstrap estimation to get variance estimates
-uq.run_bootstrap(B=1000)  # B is the number of bootstrap samples
-# Estimate variance using the bootstrap method
+# with a double-or-nothing bootstrap estimator of the variance
+uq.run_bootstrap(B=1000)  # runs the bootstrap
 var_fnr_boot, var_fpr_boot = uq.compute_variance(threshold=threshold, estimator="boot")
-# Calculate and print 95% CI for FNMR and FMR using bootstrap estimates
 ci_fnr_boot, ci_fpr_boot = uq.get_binerror_ci(threshold=threshold, var_fnr=var_fnr_boot, var_fpr=var_fpr_boot, alpha=0.05)
 ci_fnr_boot, ci_fpr_boot
 ```
@@ -75,8 +74,7 @@ To generate the intervals without bothering about variance estimation, use
 ```
 uq.get_binerror_ci(threshold = threshold, alpha = 0.05)
 ```
-Under the hood, this function runs the variance computations via the plug-in
-estimator. 
+Under the hood, this function computes the variance with the plug-in estimator. 
 
 To obtain pointwise confidence intervals for the ROC with the double-or-nothing
 bootstrap, use
