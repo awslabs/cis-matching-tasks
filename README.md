@@ -17,13 +17,7 @@ confidence intervals $C_{\alpha}$ for metrics $\theta^*$ such as
   FNMR or FRR) estimates
 - ROC coordinate estimates such as FNR@FPR (aka FNMR@FMR or FRR@FAR)
 
-such that $\mathbb{P}(\theta^*\in C_{\alpha})\geq 1-\alpha$.  
-
-<strong>Methods</strong> The methods implemented in this repository include
-(_parametric_) Wilson intervals, and (_nonparametric_) double-or-nothing,
-vertex, subsets, and two-level bootstrap. This repo contains code in both R and
-python. Two of the methods that we recommend using (Wilson and double-or-nothing
-bootstrap) are implemented in both languages. 
+such that $\mathbb{P}(\theta^*\in C_{\alpha})\geq 1-\alpha$. 
 
 ## :rocket: Getting started
 
