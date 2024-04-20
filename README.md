@@ -7,11 +7,11 @@
 
 This repository houses the cismat (Confidence IntervalS for MAtching Tasks)
 package to construct confidence intervals for performance metrics in 1:1
-:jigsaw: matching tasks such as 1:1 face and speaker verification. See [our
+matching tasks such as 1:1 face and speaker verification. See [our
 paper](https://arxiv.org/abs/2306.01198) for a description of the methods.
 
 <strong>Performance metrics</strong> With this code you can construct $1-\alpha$
-confidence intervals $C_{1-\alpha}$ for metrics $\theta^*$ such as
+confidence intervals $C_{\alpha}$ for metrics $\theta^*$ such as
 
 - False Positive Rate (FPR, aka FMR or FAR) and False Negative Rate (FNR, aka
   FNMR or FRR) estimates
