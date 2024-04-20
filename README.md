@@ -5,11 +5,10 @@
     <img src="https://img.shields.io/github/license/awslabs/cis-matching-tasks" alt="Apache-2.0">
 </p>
 
-This repository houses the cismat (Confidence IntervalS for MAtching
-Tasks) package to construct confidence intervals for performance metrics in 1:1
+This repository houses the cismat (Confidence IntervalS for MAtching Tasks)
+package to construct confidence intervals for performance metrics in 1:1
 :jigsaw: matching tasks such as 1:1 face and speaker verification. See [our
-paper](https://arxiv.org/abs/2306.01198) for a description
-of the methods.
+paper](https://arxiv.org/abs/2306.01198) for a description of the methods.
 
 <strong>Performance metrics</strong> With this code you can construct $1-\alpha$
 confidence intervals $C_{1-\alpha}$ for metrics $\theta^*$ such as
@@ -20,7 +19,7 @@ confidence intervals $C_{1-\alpha}$ for metrics $\theta^*$ such as
 
 such that $\mathbb{P}(\theta^*\in C_{\alpha})\geq 1-\alpha$.  
 
-<strong>Methods</strong>. The methods implemented in this repository include
+<strong>Methods</strong> The methods implemented in this repository include
 (_parametric_) Wilson intervals, and (_nonparametric_) double-or-nothing,
 vertex, subsets, and two-level bootstrap. This repo contains code in both R and
 python. Two of the methods that we recommend using (Wilson and double-or-nothing
