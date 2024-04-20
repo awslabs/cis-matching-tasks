@@ -5,10 +5,10 @@
     <img src="https://img.shields.io/github/license/awslabs/cis-matching-tasks" alt="Apache-2.0">
 </p>
 
-This repository houses the cismat (Confidence IntervalS for MAtching Tasks)
-package to construct confidence intervals for performance metrics in 1:1
-matching tasks :jigsaw: such as 1:1 face and speaker verification. See [our
-paper](https://arxiv.org/abs/2306.01198) (to appear at IJCV) for a description
+This repository houses the cismat (Confidence IntervalS for MAtching
+Tasks) package to construct confidence intervals for performance metrics in 1:1
+:jigsaw: matching tasks such as 1:1 face and speaker verification. See [our
+paper](https://arxiv.org/abs/2306.01198) for a description
 of the methods.
 
 <strong>Performance metrics</strong> With this code you can construct $1-\alpha$
@@ -32,6 +32,11 @@ In order to intall the cismat package, run
 ```
 pip install cismat
 ```
+or 
+```
+pip install git+https://github.com/awslabs/cis-matching-tasks.git
+```
+for the latest version of the package. 
 
 Test your setup using this example that derives confidence intervals for FNMR
 and FMR obtained by binarizing the similarity scores at a given threshold:
@@ -48,7 +53,7 @@ mt.generate_similarity_scores()  # Generate cosine similarity scores between ima
 threshold = 0.9
 # Instantiate the class to estimate error rates using similarity scores
 uq = UncertaintyEstimator(scores=mt.similarity_scores) # Example structure: dictionary[id1][id2] = [score between image from id1 and id2]
-# Compute False Non-Match Rate (FNMR) and False Match Rate (FMR) based on the threshold
+# Compute False Non-Match Rate (FNMR, aka FNR) and False Match Rate (FMR, aka FPR) based on the threshold
 fnr, fpr, _ = uq.compute_binerror_metrics(threshold)
 fnr, fpr
 
@@ -86,7 +91,7 @@ the package. In case of large datasets, the computations of the uncertainty may
 be burdensome. Luckily, the computational speed of the functions in this package
 can be substantially improved. Contact me if you are interested in this. 
 
-We have moved all the code related to experiments in the paper to another
+We have moved all the code related to the experiments in the paper to another
 branch named `paper`. 
 
 ## :books: Citation
