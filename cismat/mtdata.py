@@ -2,11 +2,14 @@ import numpy as np
 from numpy.linalg import norm
 import itertools
 
-class MTData: 
+
+class MTData:
     def __init__(self, df):
         self.df = df
-    
-    def generate_similarity_scores(self, fun=lambda x, y: np.dot(x, y) / (norm(x) * norm(y)), pairs=None):
+
+    def generate_similarity_scores(
+        self, fun=lambda x, y: np.dot(x, y) / (norm(x) * norm(y)), pairs=None
+    ):
         sim_dict = {id: {} for id in self.df}
         if pairs is None:
             for id1 in self.df:
@@ -29,7 +32,7 @@ class MTData:
                 score = fun(self.df[id1][img1], self.df[id2][img2])
                 sim_dict[id1].setdefault(id2, []).append(score)
                 sim_dict[id2].setdefault(id1, []).append(score)
-                
+
             sim_dict = {id: sim_dict[id] for id in sim_dict if sim_dict[id]}
 
-        self.similarity_scores = sim_dict   
+        self.similarity_scores = sim_dict
