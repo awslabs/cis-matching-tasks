@@ -6,6 +6,7 @@ pretrained_models
 *.pdf
 dist
 data/morph
+experiments
 
 # History files
 .Rhistory
