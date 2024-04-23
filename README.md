@@ -22,10 +22,10 @@ paper](https://arxiv.org/abs/2306.01198) for a description of the methods.
 ## :rocket: Getting started
 
 In order to intall the cimat package, run 
-<!-- ```
+```
 pip install cimat
 ```
-or  -->
+or 
 ```
 pip install git+https://github.com/awslabs/cis-matching-tasks.git
 ```
