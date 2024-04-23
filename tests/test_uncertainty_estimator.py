@@ -1,6 +1,6 @@
 import unittest
 import json
-from cismat import MTData, UncertaintyEstimator
+from cimat import MTData, UncertaintyEstimator
 import numpy as np
 
 

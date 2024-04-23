@@ -5,11 +5,11 @@
     <img src="https://img.shields.io/github/license/awslabs/cis-matching-tasks" alt="Apache-2.0">
 </p>
 
-This repository hosts the cismat (Confidence IntervalS for MAtching Tasks)
+This repository hosts the cimat (Confidence Intervals for MAtching Tasks)
 package, designed to create confidence intervals for performance metrics in 1:1
 matching tasks like face and speaker verification.
 
-With cismat, you can generate confidence intervals ($C_{\alpha}$) with a
+With cimat, you can generate confidence intervals ($C_{\alpha}$) with a
 confidence level of $1-\alpha$ for metrics ($\theta^*$) such as:
 
 - False Positive Rate (FPR, aka FMR or FAR) and False Negative Rate (FNR, aka
@@ -21,9 +21,9 @@ paper](https://arxiv.org/abs/2306.01198) for a description of the methods.
 
 ## :rocket: Getting started
 
-In order to intall the cismat package, run 
+In order to intall the cimat package, run 
 <!-- ```
-pip install cismat
+pip install cimat
 ```
 or  -->
 ```
@@ -35,7 +35,7 @@ Test your setup using this example that derives confidence intervals for FNMR
 and FMR obtained by binarizing the similarity scores at a given threshold:
 ```
 import json
-from cismat import MTData, UncertaintyEstimator
+from cimat import MTData, UncertaintyEstimator
 
 # Load embeddings from JSON file into a dictionary structure
 df = json.load(open('data/embeddings.json', 'r'))  # Example structure: dictionary[id][image] = embedding
