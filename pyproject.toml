@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cimat"
-version = "0.1.1"
+version = "0.1.2"
 description = "A package for uncertainty quantification of error rates in 1:1 matching tasks."
 authors = ["Riccardo Fogliato"]
 readme = "README.md"
