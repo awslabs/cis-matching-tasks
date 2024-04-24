@@ -36,14 +36,15 @@ and FMR obtained by binarizing the similarity scores at a given threshold:
 ```
 import json
 from cimat import MTData, UncertaintyEstimator
+import numpy as np
 
-# Load embeddings from JSON file into a dictionary structure
-df = json.load(open('data/embeddings.json', 'r'))  # Example structure: dictionary[id][image] = embedding
+# Generate embeddings (here you would import your own embeddings)
+df = {id: {img: np.random.normal(id, 1, 100) for img in range(5)} for id in range(25)} # Example structure: dictionary[id][image] = embedding
 mt = MTData(df)
 mt.generate_similarity_scores()  # Generate cosine similarity scores between images
 
 # Set a threshold for determining matches versus non-matches
-threshold = 0.9
+threshold = 0.7
 # Instantiate the class to estimate error rates using similarity scores
 # Example structure: dictionary[id1][id2] = [score between image from id1 and id2]
 uq = UncertaintyEstimator(scores=mt.similarity_scores) 
