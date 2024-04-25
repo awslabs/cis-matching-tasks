@@ -256,8 +256,8 @@ class UncertaintyEstimator:
 
         if target_fpr is None:
             return fpr, tpr, auc
-
-        return fpr, np.interp(target_fpr, fpr, tpr), auc
+        else:
+            return target_fpr, np.interp(target_fpr, fpr, tpr), auc
 
     def _get_ci_wilson(self, n_errors, n_instances, mean_variance, alpha):
         mu = n_errors / n_instances

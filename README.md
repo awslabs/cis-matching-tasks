@@ -58,7 +58,7 @@ var_fnr, var_fpr = uq.compute_variance(threshold=threshold, estimator="plugin")
 ci_fnr, ci_fpr = uq.get_binerror_ci(threshold=threshold, var_fnr=var_fnr, var_fpr=var_fpr, alpha=0.05)
 ci_fnr, ci_fpr
 
-# with a double-or-nothing bootstrap estimator of the variance
+# with a double-or-nothing bootstrap estimator of the variance (not needed if you're doing the plug-in estimator already)
 uq.run_bootstrap(B=1000)  # runs the bootstrap
 var_fnr_boot, var_fpr_boot = uq.compute_variance(threshold=threshold, estimator="boot")
 ci_fnr_boot, ci_fpr_boot = uq.get_binerror_ci(threshold=threshold, var_fnr=var_fnr_boot, var_fpr=var_fpr_boot, alpha=0.05)
@@ -74,6 +74,8 @@ Under the hood, this function computes the variance with the plug-in estimator.
 To obtain pointwise confidence intervals for the ROC with the double-or-nothing
 bootstrap, use
 ```
+fpr, tpr, auc = uq.get_roc(target_fpr=[0.01, 0.1])
+# you must have run the bootstrap through uq.run_bootstrap(B=1000)
 ci_tpr_at_fnr, ci_auc = uq.get_roc_ci(target_fpr=[0.01, 0.1], alpha = 0.05)
 ci_tpr_at_fnr, ci_auc
 ```
