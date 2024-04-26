@@ -31,8 +31,11 @@ pip install git+https://github.com/awslabs/cis-matching-tasks.git
 ```
 for the latest version of the package. 
 
-Test your setup using this example that derives confidence intervals for FNMR
-and FMR obtained by binarizing the similarity scores at a given threshold:
+Test your setup using the
+[```jumpstarter.ipynb```](https://github.com/awslabs/cis-matching-tasks/blob/main/examples/jumpstarter.ipynb)
+notebook or copying and pasting the following code that derives confidence
+intervals for FNMR and FMR obtained by binarizing the similarity scores at a
+given threshold on synthetic data:
 ```
 import json
 from cimat import MTData, UncertaintyEstimator
@@ -80,10 +83,12 @@ ci_tpr_at_fnr, ci_auc = uq.get_roc_ci(target_fpr=[0.01, 0.1], alpha = 0.05)
 ci_tpr_at_fnr, ci_auc
 ```
 
-See the code in `examples/morph.ipynb` for a more detailed example on how to use
-the package. In case of large datasets, the computations of the uncertainty may
-be burdensome. Luckily, the computational speed of the functions in this package
-can be substantially improved. Contact me if you are interested in this. 
+See the code in the notebook for the MORPH dataset
+([```morph.ipynb```](https://github.com/awslabs/cis-matching-tasks/blob/main/examples/morph.ipynb))
+for a more detailed example on how to use the package. In case of large
+datasets, the computations of the uncertainty may be burdensome. The
+computational speed of the functions in this package can be substantially
+improved through parallelization. 
 
 We have moved all the code related to the experiments in the paper to another
 branch named `paper`. 
