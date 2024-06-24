@@ -98,11 +98,13 @@ branch named `paper`.
 To cite our paper/code/package, use
 
 ```
-@article{fogliato2023confidence,
-  title={Confidence Intervals for Error Rates in Matching Tasks: Critical Statistical Analysis and Recommendations},
+@article{fogliato2024confidence,
+  title={Confidence intervals for error rates in 1: 1 matching tasks: Critical statistical analysis and recommendations},
   author={Fogliato, Riccardo and Patil, Pratik and Perona, Pietro},
-  journal={arXiv preprint arXiv:2306.01198},
-  year={2023}
+  journal={International Journal of Computer Vision},
+  pages={1--26},
+  year={2024},
+  publisher={Springer}
 }
 ```
 
