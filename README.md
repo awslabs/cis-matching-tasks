@@ -36,7 +36,7 @@ Test your setup using the
 notebook or copying and pasting the following code that derives confidence
 intervals for FNMR and FMR obtained by binarizing the similarity scores at a
 given threshold on synthetic data:
-```
+```python
 import json
 from cimat import MTData, UncertaintyEstimator
 import numpy as np
@@ -69,14 +69,14 @@ ci_fnr_boot, ci_fpr_boot
 ```
 
 To generate the intervals without bothering about variance estimation, use
-```
+```python
 uq.get_binerror_ci(threshold = threshold, alpha = 0.05)
 ```
 Under the hood, this function computes the variance with the plug-in estimator. 
 
 To obtain pointwise confidence intervals for the ROC with the double-or-nothing
 bootstrap, use
-```
+```python
 fpr, tpr, auc = uq.get_roc(target_fpr=[0.01, 0.1])
 # you must have run the bootstrap through uq.run_bootstrap(B=1000)
 ci_tpr_at_fnr, ci_auc = uq.get_roc_ci(target_fpr=[0.01, 0.1], alpha = 0.05)
